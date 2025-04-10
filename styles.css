@@ -337,5 +337,8 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-    color: #a5bbee;
+    color:  #f39c12;
+}
+footer .social-links a:active {
+    color:  #c2c3c4;
 }
