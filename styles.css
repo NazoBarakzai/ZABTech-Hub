@@ -1,3 +1,4 @@
+
 .background-image {
     margin-top: 40px;
     background-image: url('Images/background.jpeg');
@@ -131,6 +132,12 @@ nav {
     .hamburger {
         display: block; /* Show hamburger icon on small screens */
     }
+.hamburger.active {
+    background-color: red;
+    color: white;
+    padding: 2px 10px;
+    transition: background-color 0.3s;
+}
 
     .main-nav.active, .secondary-nav.active {
         display: flex; /* Show menu when active class is added */
@@ -347,4 +354,4 @@ footer .social-links a:hover {
 }
 footer .social-links a:active {
     color:  #c2c3c4;
-}
+     }
