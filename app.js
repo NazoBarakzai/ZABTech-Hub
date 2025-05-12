@@ -1,14 +1,20 @@
 const hamburger = document.getElementById("hamburger-menu");
 const mainNav = document.getElementById("nav-links");
-const secondaryNav = document.getElementById("secondary-nav");
+const hamburgerIcon = hamburger.querySelector("i");
 
-// Toggle the active class on click
 hamburger.addEventListener("click", () => {
     mainNav.classList.toggle("active");
-    secondaryNav.classList.toggle("active");
+
+    const secondaryNav = document.getElementById("secondary-nav");
+    if (secondaryNav) secondaryNav.classList.toggle("active");
+
+    // Toggle between bars and cross
+    hamburgerIcon.classList.toggle("fa-bars");
+    hamburgerIcon.classList.toggle("fa-times");
+
+    // Toggle red background and white icon
+    hamburger.classList.toggle("active");
 });
-
-
 const nextBtn = document.querySelector('.next-btn');
 const backBtn = document.querySelector('.back-btn');
 const imageContainer = document.querySelector('.image-container');
@@ -21,21 +27,7 @@ nextBtn.addEventListener('click', () => {
         behavior: 'smooth' // Smooth scrolling effect
     });
 });
-// Ensure buttons stay vertically centered relative to image container
-function positionButtons() {
-    const container = document.querySelector('.background-image');
-    const nextBtn = document.querySelector('.next-btn');
-    const backBtn = document.querySelector('.back-btn');
 
-    const containerHeight = container.offsetHeight;
-
-    nextBtn.style.top = `${containerHeight / 2}px`;
-    backBtn.style.top = `${containerHeight / 2}px`;
-}
-
-// Reposition buttons on load and resize
-window.addEventListener('load', positionButtons);
-window.addEventListener('resize', positionButtons);
 // Scroll to previous image when the "Back" button is clicked
 backBtn.addEventListener('click', () => {
     const imageWidth = document.querySelector('a img').offsetWidth; // Get the width of an image
