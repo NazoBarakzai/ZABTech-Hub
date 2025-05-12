@@ -35,7 +35,8 @@ backBtn.addEventListener('click', () => {
     function toggleLearnMore() {
       const extraInfo = document.querySelector('.extra-info');
       const button = document.querySelector('.learn-more-btn');
-      
+      // Ensure buttons stay vertically centered relative to image container
+
       // Toggle visibility of the extra information
       if (extraInfo.style.display === "none" || extraInfo.style.display === "") {
         extraInfo.style.display = "block";
