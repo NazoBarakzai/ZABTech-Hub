@@ -21,7 +21,21 @@ nextBtn.addEventListener('click', () => {
         behavior: 'smooth' // Smooth scrolling effect
     });
 });
+// Ensure buttons stay vertically centered relative to image container
+function positionButtons() {
+    const container = document.querySelector('.background-image');
+    const nextBtn = document.querySelector('.next-btn');
+    const backBtn = document.querySelector('.back-btn');
 
+    const containerHeight = container.offsetHeight;
+
+    nextBtn.style.top = `${containerHeight / 2}px`;
+    backBtn.style.top = `${containerHeight / 2}px`;
+}
+
+// Reposition buttons on load and resize
+window.addEventListener('load', positionButtons);
+window.addEventListener('resize', positionButtons);
 // Scroll to previous image when the "Back" button is clicked
 backBtn.addEventListener('click', () => {
     const imageWidth = document.querySelector('a img').offsetWidth; // Get the width of an image
