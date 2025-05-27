@@ -7,7 +7,162 @@
     <link rel="icon" type="image/x-icon" href="Images/icon.png" id="icon"/>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-   
+   <style>
+  
+.hero {
+  
+  
+  margin-top:40px;
+  padding-top: -50px;
+    height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: left;
+  display: none;
+  
+
+}
+.hero.visible{
+    display:flex;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+h1 {
+  color: #fdf002;
+}
+
+
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  width: 100%;
+  align-items: justify;
+  gap: 40px;
+  padding-bottom: 0;
+  margin-top: 80px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.photo {
+  flex: 1 1 300px;
+  margin-top: 350px;
+}
+
+.text {
+  flex: 2 1 500px;
+  margin-top: 150px;
+ 
+}
+
+.text h1 {
+  margin-bottom: 10px;
+}
+
+.text h2 {
+  font-weight: 300;
+  color: #cfd9df;
+  margin-bottom: 20px;
+}
+.img {
+  width: 800px;
+  height: 350px;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out;
+}
+.img:hover {
+  transform: scale(1.05);
+}
+.text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f1f1f1;
+}
+h3{
+     text-shadow: 2px 2px blue;
+}
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  transition: all 0.3s ease-in-out;
+}
+p:hover {
+  transform: translateX(8px);
+  color: #ffffff;
+}
+
+.home-button {
+  display: block;
+  width: 150px;
+  margin: 40px auto;
+  padding: 10px 20px;
+  background-color: #f39c12;
+  text-align: center;
+  font-size: 18px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid rgb(254, 252, 252);
+  transition: all 0.3s ease-in-out;
+}
+.home-button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+.home-button:active {
+  background-color: #818282;
+}
+.lnk {
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive adjustments for logo */
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text, .photo {
+    text-align: center;
+  }
+
+  .logo-container {
+    top: 5px;
+    left: 5px;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
+}
+  </style>
 </head>
 <body>
   
@@ -19,9 +174,9 @@
                 <ul class="main-nav" id="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#trades">Trades</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <!-- <li><a href="#zabtech">ZABTech</a></li> -->
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
                 </ul>
                 <!-- <ul class="secondary-nav">
                     <li><a href="#Courses">Courses</a></li>
@@ -33,61 +188,34 @@
                 </div>
             </nav>
         </div>
-    </header>
-    
- 
-
 
     <section id="home" class="main-content">
         <h2>Welcome to ZABTech - Hub</h2>
-        <p>We are committed to providing cutting-edge technology solutions for businesses worldwide.</p>
+        <p>We are committed to provide cutting-edge technology solutions for businesses worldwide.</p>
         <button id="about" class="learn-more-btn" onclick="toggleLearnMore()">Learn More</button>
         <!-- Hidden extra information -->
-        <div class="extra-info">
-            <h2>Our Mission</h2>
-            <p></p>
+         <div class="hero">
+    <div class="content">
+        <p >
+         We believe that empowering youth with practical skills is the key to transforming communities. Our mission is to create opportunities where talent meets training, and potential becomes progress.
+        </p>
+        <div style="color: #fdf002;margin-bottom: -40px;"><h1 style="margin-bottom: -10px;">Ms. Waheeda Mahesar</h1>
+        <p style="margin-top: 20px;">MSC - Computer Science <small>2000</small><br>
+        <small>Executive Director</small><br>
+        <small>SZABIST ZABTech</small>
+        </p>
+      </div>
+      <button class="home-button"><a class="lnk" href="#home">Visit Home</a></button>
+      </div>
+       <div class="photo">
+        <a href="https://pk.linkedin.com/in/waheeda-mahesar-53935348"><img src="Images/director.png" class="img" alt="Ms. Waheeda Mahesar"></a>
+      </div>
+      <div class="text">
+        <h3>"Learn Today, <br>Earn Tomorrow"</h3>
+        <p style="line-height: 1; font-size: 0.1erm;  color: #aeadad;"><small>Empowering through expertise, TVET transforms potential into proficiency.</small></p>
+    </div>
+</div>
         
-            <h2>Who We Are</h2>
-            <p></p>
-        
-            <h2>Our Values</h2>
-            <p>At ZabTech - Hub, we believe in:</p>
-            <ul>
-              <li><strong>Innovation:</strong></li>
-              <li><strong>Integrity:</strong></li>
-              <li><strong>Customer Success:</strong> </li>
-              <li><strong>Collaboration:</strong> </li>
-            </ul>
-            
-          
-              <h2>Meet Our Team</h2>
-              <div class="team">
-                <div class="team-member">
-                  <img src="" alt="">
-                  <h3>Mr. Shahid</h3>
-                  <p>Principal</p>
-                </div>
-                <div class="team-member">
-                  <img src="" alt="">
-                  <h3>Mr. Fida Muhammad</h3>
-                  <p>Vice Principal</p>
-                </div>
-                <div class="team-member">
-                  <img src="" alt="">
-                  <h3>Mr. Obaid</h3>
-                  <p>Finance Officer</p>
-                </div>
-              </div>
-        
-              <h2>Why Choose ZabTech?</h2>
-               <p>Choose ZabTech for:</p>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-
     </section>
 
     <section class="background-image" id="trades">
@@ -103,18 +231,26 @@
     </section>
     
     
-    <section id="contact">
-    <footer>
-        <small>&copy;2025 ZABTech-Hub. All rights reserved.</small>
-        <br><br>
-        <div class="social-links">
-            <a href="https://www.facebook.com/share/15FbZraBwF/" target="_blank" class="fab fa-facebook-f"></a>
-            <a href="https://x.com/SzabistZabtech" target="_blank" class="fab fa-twitter"></a>
-            <a href="https://www.instagram.com/zabtech.hub?igsh=OTd1amF5cmw1dHp0" target="_blank" class="fab fa-instagram"></a>
-            <a href="https://www.linkedin.com/in/szabistzabtech?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="fab fa-linkedin-in"></a>
+    <footer style="margin-top: 100px;">
+      <div class="social-links">     
+       <a href="https://www.facebook.com/share/15FbZraBwF/" target="_blank" class="fab fa-facebook-f"></a>
+       <a href="https://x.com/SzabistZabtech" target="_blank" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/zabtech.hub?igsh=OTd1amF5cmw1dHp0" target="_blank" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/szabistzabtech?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="fab fa-linkedin-in"></a>
+    </div>
+    <hr>
+    <div class="small">
+        <small>&copy;Copyright 2025 <span style="color: rgb(192, 192, 192);">ZABTech-Hub</span> All Rights Reserved.</small>
+      </div>
+    <div class="otherlinks">
+       
+        <a class="prt" href="privacy.html"><small>Privacy Policy</small></a>&emsp;
+        <a class="prt" href="terms.html"><small>Terms & Conditions</small></a>
         </div>
     </footer>
-</section>
     <script src="app.js"></script>
+    <script src="app2.js">
+</script>
+
 </body>
 </html>
