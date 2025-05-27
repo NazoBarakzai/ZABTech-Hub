@@ -328,6 +328,360 @@ nav {
         font-size: 5rem; /* Smaller button size */
     }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.background-image {
+    margin-top: 40px;
+    background-image: url('Images/background.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    background-color: rgba(111, 111, 112, 0.8);
+    background-blend-mode: overlay; 
+    
+
+}
+.image-container{
+ 
+display: flex;
+justify-content: space-around;
+object-fit: cover;
+object-position: center;
+background-blend-mode: overlay;
+
+}
+img{
+    margin-top:85px;
+    max-width: 350px;
+    max-height: auto;
+}
+img:hover{
+opacity: 0.5;
+
+}
+ul li{
+    list-style-type: none;
+
+}
+header {
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 30px;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Main navigation (horizontal on larger screens) */
+.main-nav, .secondary-nav {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Each list item */
+.main-nav li, .secondary-nav li {
+    margin-right: 30px;
+}
+
+.main-nav a, .secondary-nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover, .secondary-nav a:hover {
+    background-color: #c9c9c7;
+    border-radius: 5px;
+    color: #003380;
+        transform: scale(1.05);
+}
+.main-nav a:active, .secondary-nav a:active {
+    background-color: #f39c12;
+    border-radius: 5px;
+    color: #003380;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+
+}
+.hamburger i {
+    transition: transform 0.3s ease;
+}
+.hamburger:hover i {
+    transform: rotate(90deg);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    /* Stack the logo and nav on small screens */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav, .secondary-nav {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hide the menu by default */
+        width: 100%;
+    }
+
+    .main-nav li, .secondary-nav li {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on small screens */
+    }
+.hamburger.active {
+    background-color: red;
+    color: white;
+    padding: 2px 10px;
+    transition: background-color 0.3s;
+}
+
+    .main-nav.active, .secondary-nav.active {
+        display: flex; /* Show menu when active class is added */
+    }
+}
+.main-content {
+    text-align: center;
+    max-width: 100%;
+    padding: 100px;
+    background: linear-gradient(to right, #021c4b, #7386a4);
+    color: #f4f4f4;
+}
+
+.hello{
+    text-align: justify;
+}
+
+.main-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.main-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+ .team {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .team-member {
+      text-align: center;
+      width: 30%;
+         transition: transform 0.3s ease;
+    }
+    .team-member:hover {
+    transform: scale(1.05);
+}
+
+    .team-member img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .team-member h3 {
+      margin-top: 10px;
+      color: #afafaf;
+    }
+
+    .learn-more-btn {
+      display: block;
+      width: 200px;
+      margin: 40px auto;
+      padding: 12px 20px;
+      background-color: #333;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+       transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .learn-more-btn:hover {
+      background-color: #f39c12;
+        transform: translateY(-2px);
+    }
+    .learn-more-btn:active {
+      background-color: #818282;
+    }
+
+    .extra-info {
+      display: none;
+      margin-top: 20px;
+    }
+
+
+
+
+
+.background-image {
+    align-items: center;
+    margin-top: 40px;
+    background-color: rgba(31, 31, 31, 0.8);
+    background-blend-mode: overlay;
+    width: 100%;
+    padding: 10px 0px;
+    position: relative; /* Position the buttons correctly */
+}
+
+.image-container {
+    display: flex; /* Display images in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Smooth snapping between images */
+    gap: 10px; /* Space between images */
+    padding: 10px;
+    scrollbar-width: none; /* Firefox: Hide scrollbar */
+    -ms-overflow-style: none;  /* For Internet Explorer */
+}
+
+/* For Webkit-based browsers like Chrome, Safari, and Edge */
+.image-container::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+.image-container a {
+    display: inline-block;
+    min-width: 300px; /* Set a minimum width for each image */
+}
+
+.image-container img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth zoom-in effect */
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Optional: Add hover effect on images */
+.image-container img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+        transform: scale(1.05);
+    opacity: 0.5;
+}
+
+/* Style for the "Next" button with icon */
+.next-btn,
+.back-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+      width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next-btn:hover,
+.back-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+      transform: translateY(-2px);
+}
+
+/* Position the "Next" button to the right */
+.next-btn {
+    right: 10px;
+}
+
+/* Position the "Back" button to the left */
+.back-btn {
+    left: 10px;
+}
+
+/* Font Awesome icon customization */
+.next-btn i,
+.back-btn i {
+    font-size: 1.8rem; /* Adjust icon size */
+}
+
+@media (max-width: 768px) {
+    /* For mobile devices */
+    .background-image {
+        padding: 20px 0; /* Add more padding for smaller screens */
+    }
+
+    .next-btn,
+    .back-btn {
+        padding: 8px;
+        font-size: 1.2rem; /* Even smaller button sizes */
+         transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .image-container a {
+        min-width: 200px; /* Adjust image width for mobile */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Ensure images don't exceed their container */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For very small screens */
+    .next-btn,
+    .back-btn {
+        padding: 8px;
+        font-size: 5rem; /* Smaller button size */
+    }
+
     .image-container a {
         min-width: 180px; /* Even smaller images on very small screens */
     }
@@ -336,22 +690,44 @@ nav {
 
 footer {
     background-color: #333;
-    color: white;
+    color: grey;
     text-align: center;
-    padding: 20px;
+    padding: 70px;
     margin-top: 40px;
+    height: auto;
 }
 
 footer .social-links a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 30px;
     font-size: 1.2rem;
+     transition: color 0.3s ease, transform 0.3s ease;
+}
+.small{
+    margin: 20px;
+}
+.otherlinks .prt{
+    text-decoration: none;
+    color: grey;
+  
+
+}
+.prt{
+    font-size: 1rem;
 }
 
 footer .social-links a:hover {
     color:  #f39c12;
+     transform: scale(1.2);
+    color: #f39c12;
 }
 footer .social-links a:active {
     color:  #c2c3c4;
      }
+     .error {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
