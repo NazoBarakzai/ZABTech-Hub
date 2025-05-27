@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <title>ZABTech-Hub</title>
+    <link rel="icon" type="image/x-icon" href="Images/icon.png" id="icon"/>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    
+    }
+
+    label {
+      display: inline-block;
+      width: 100px;
+      margin-bottom: 10px;
+      margin-right: 200px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"], 
+    select,
+    input[type="number"] {
+      width: 200px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin-top: 20px;
+      clear: both;
+      margin-left: 80px;
+    }
+
+    .long {
+      width: 100%;
+    }
+
+    .trades {
+      margin-top: 20px;
+    }
+    .submit{
+      background-color: blue;
+      color: white;
+      padding: 5px 15px;
+    }
+  </style>
+</head>
+<body>
+   <div class="header-container">
+            
+                <img id="home" class="logo" src="Images/zabTech.png" alt="ZabTech Logo">
+      
+            <nav>
+                <ul class="main-nav" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Trades</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+                <!-- <ul class="secondary-nav">
+                    <li><a href="#Courses">Courses</a></li>
+                    <li><a href="#Information">Information</a></li>
+                    <li><a href="#Career">Career</a></li>
+                </ul> -->
+                <div class="hamburger" id="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+
+
+<form id="registration-form" action="register.php" method="post">
+  <div class="section">
+    <label for="student_name">Student Name:</label>
+    <input type="text" name="student_name">
+  </div>
+
+  <div class="section">
+    <label for="father_name">Father Name:</label>
+    <input type="text" name="father_name">
+  </div>
+
+  <div class="section">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" name="dob">
+  </div>
+
+    <div class="section">
+    <label for="qualification">Qualification:</label>
+    <input type="text" name="qualification">
+  </div>
+
+  <div class="section">
+    <label for="domicile">Local/Domicile:</label>
+    <input type="text" name="domicile">
+  </div>
+
+  <div class="section">
+    <label for="religion">Religion:</label>
+    <input type="text" name="religion">
+  </div>
+
+  <div class="section">
+    <label for="cnic">CNIC:</label>
+    <input type="text" name="cnic">
+  </div>
+
+    <div class="section">
+    <label for="phone">Phone Number:</label>
+    <input type="tel" name="phone">
+  </div>
+
+  <div class="section">
+    <label for="guardian_occupation">Guardian's Occupation:</label>
+    <input type="text" name="guardian_occupation">
+  </div>
+
+  <div class="section">
+    <label for="guardian_phone">Guardian Cell Number:</label>
+    <input type="tel" name="guardian_phone">
+  </div>
+
+  <div class="section">
+    <label for="guardian_cnic">Guardian's CNIC:</label>
+    <input type="text" name="guardian_cnic">
+  </div>
+
+  <div class="section">
+    <label for="temp_address">Temporary Address:</label>
+    <input type="text" class="long" name="temp_address">
+  </div>
+
+  <div class="section">
+    <label for="perm_address">Permanent Address:</label>
+    <input type="text" class="long" name="perm_address">
+  </div>
+
+  <div class="section">
+    <label for="trade">Trades:</label>
+    <select name="trade" id="">
+      <option value="beautician">Beautician</option>
+      <option valiue="automechanics"> Auto Mechanics</option>
+      <option value="pipefitter"> Pipe Filter (Plumbing)</option>
+      <option value="graphics"> Graphic Design & Motion</option>
+      <option value="computeroperator"> Computer Operator</option>
+      <option value="motorcycle"> Motorcycle Mechanic</option>
+      <option value="hvac"> Heating, Ventilation & AC (HVAC)</option>
+      <option value="welding"> Welding</option>
+      <option value="machinist"> Machinist (CNC)</option>
+      <option value="solar"> Solar Technician</option>
+      <option value="cooking"> Hospitality Cook (Culinary Art)</option>
+      <option value="web"> Web Designing & Development</option>
+      <option value="ig"> Industrial Garments</option>
+      <option value="logiostics"> Logistics & Supply Chain Assistant</option>
+    </select>
+  </div>
+
+  <div class="section">
+    <label for="picture">Picture:</label>
+    <input type="file"  name="picture">
+  </div>
+
+   <div class="section">
+    <label for="cnic">CNIC(pdf):</label>
+    <input type="file"  name="cnic">
+  </div>
+
+ <div class="section">
+    <label for="local">Local/Domicile:</label>
+    <input type="file"  name="local">
+  </div>
+
+   <div class="section">
+    <label for="education">Marksheet/Certificate:</label>
+    <input type="file"  name="education">
+  </div>
+
+  <br>
+  <div class="section">
+    <button type="submit" class="submit">Submit</button>
+  </div>
+</form>
+  <footer>
+      <div class="social-links">     
+       <a href="https://www.facebook.com/share/15FbZraBwF/" target="_blank" class="fab fa-facebook-f"></a>
+       <a href="https://x.com/SzabistZabtech" target="_blank" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/zabtech.hub?igsh=OTd1amF5cmw1dHp0" target="_blank" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/szabistzabtech?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="fab fa-linkedin-in"></a>
+    </div>
+    <hr>
+    <div class="small">
+        <small>&copy;Copyright 2025 <span style="color: rgb(192, 192, 192);">ZABTech-Hub</span> All Rights Reserved.</small>
+      </div>
+    <div class="otherlinks">
+       
+        <a class="prt" href="privacy.html"><small>Privacy Policy</small></a>&emsp;
+        <a class="prt" href="terms.html"><small>Terms & Conditions</small></a>
+        </div>
+    </footer>
+    <script src="register.js"></script>
+</body>
+</html>
