@@ -15,27 +15,37 @@ hamburger.addEventListener("click", () => {
     // Toggle red background and white icon
     hamburger.classList.toggle("active");
 });
-const nextBtn = document.querySelector('.next-btn');
-const backBtn = document.querySelector('.back-btn');
-const imageContainer = document.querySelector('.image-container');
 
-// Scroll to next image when the "Next" button is clicked
-nextBtn.addEventListener('click', () => {
-    const imageWidth = document.querySelector('a img').offsetWidth; // Get the width of an image
-    imageContainer.scrollBy({
-        left: imageWidth,  // Scroll by the width of one image
-        behavior: 'smooth' // Smooth scrolling effect
-    });
-});
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.querySelector(".image-container");
+        const backBtn = document.querySelector(".back-btn");
+        const nextBtn = document.querySelector(".next-btn");
 
-// Scroll to previous image when the "Back" button is clicked
-backBtn.addEventListener('click', () => {
-    const imageWidth = document.querySelector('a img').offsetWidth; // Get the width of an image
-    imageContainer.scrollBy({
-        left: -imageWidth, // Scroll by the width of one image (in the opposite direction)
-        behavior: 'smooth' // Smooth scrolling effect
+        const scrollAmount = 400; // Adjust this based on how far you want to scroll
+
+        nextBtn.addEventListener("click", () => {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        backBtn.addEventListener("click", () => {
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
     });
-});
+
+  const container = document.querySelector('.image-container');
+  let scrollAmount = 1; // speed of scrolling
+
+  function autoScroll() {
+    container.scrollLeft += scrollAmount;
+
+    // When reaching the end, reset to start for infinite loop
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+      container.scrollLeft = 0;
+    }
+  }
+
+  // Scroll every 20ms (adjust as needed for speed)
+  let scrollInterval = setInterval(autoScroll, 20);
 
     // JavaScript function to toggle the extra information section
     function toggleLearnMore() {
