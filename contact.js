@@ -1,4 +1,5 @@
-document.getElementById('contact-form').addEventListener('submit', function (e) {
+
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent actual submission
 
     // Clear previous error messages
@@ -45,3 +46,4 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     error.textContent = message;
     input.parentNode.insertBefore(error, input.nextSibling);
   }
+
