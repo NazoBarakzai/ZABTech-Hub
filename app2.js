@@ -1,4 +1,4 @@
-function toggleLearnMore() {
+  function toggleLearnMore() {
     const content = document.querySelector('.hero');
     const button = document.getElementById('about');
 
